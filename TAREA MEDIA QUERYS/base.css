@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  color: #000;
+  background: #332f29;
+  font-size: 100%;
+}
+#contenedor {
+  width: 800px;
+  background: #8fa68e;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: hidden;
+}
+nav {
+  background: #cc3910;
+  float: left;
+  width: 160px;
+  
+}
+ul {
+  list-style-type: none;
+}
+a {
+  color: #f1f2c0;
+  text-decoration: none;
+}
+section {
+  background: #f1f2c0;
+  float: left;
+  margin: 0 0 0 25px;
+  width: 400px;
+}
+aside {
+  background: #ccc59e;
+  float: right;
+  width: 190px;
+}
+@media screen and (max-width: 800px) {
+  body {
+    color: #000;
+    background: #332f29;
+    font-size: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+
+  nav {
+    background: #c5b739;
+    width: 100%;
+    line-height: 30px;
+	border-bottom: solid 1px black;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  section {
+    background: #f1f2c0;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 20px;
+	border-bottom: solid 1px black;
+  }
+  aside {
+    background: #ccc59e;
+    width: 100%;
+  }
+  .sang {
+    margin-left: 20px;
+  }
+  a:hover {
+    color: azure;
+    transition: all 0.3s;
+  }
+}

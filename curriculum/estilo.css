@@ -116,4 +116,8 @@ input[type="submit"] {
    margin-left: 30px;
     margin-top: 60px;
 }
- 
+ .material-symbols-outlined{
+    margin-right: -50px;
+    position: relative;
+    top: 3px;
+ }
