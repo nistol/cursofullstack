@@ -2,7 +2,7 @@ body {
   background: url(../images/tex2.jpg) repeat top left;
 }
 
-.animacion1 {
+/* /* .animacion1 {
   width: 100%;
   height: 40px;
   border-radius: 10px;
@@ -18,7 +18,7 @@ body {
   animation-fill-mode: forwards;
 }
 @keyframes animacion1 {
-  from {
+  0% {
     font-size: 0%;
     margin-left: 100%;
   }
@@ -26,16 +26,17 @@ body {
     font-size: 100%;
   }
 
-  to {
+  100% {
     font-size: 100%;
     width: 100%;
-  }
-}
+  } */
 
-.animacion1 h1 {
+.titulo {
   text-align: center;
-  color: rgba(40, 107, 144, 0.7);
+  color: rgba(0,0,0,0.7);
   text-shadow: 4px 0px 6px rgba(5, 32, 30, 0.46);
+  font-family: "Six Caps", sans-serif;
+  font-size: 60px;
 }
 h2 {
   text-align: center;
@@ -52,32 +53,90 @@ li {
   margin-left: 40px;
   position: relative;
   left: -20px;
-  background-color: white;
+  width: 50px;
+  text-align: center;
+  background-color: rgba(87, 84, 84,0.7);
   border-radius: 3px;
-  padding: 3px;
+  padding: 5px;
   box-shadow: 1px 1px 2px #aaa;
   -webkit-box-shadow: 1px 1px 2px #aaa;
   box-shadow: 1px 1px 2px #aaa;
   font-size: 12px;
-  color: rgb(124, 121, 121);
+  color: rgba(218, 216, 216,1);
+  
+
 }
 .flexcont2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  column-gap: 20%;
+  column-gap: 5%;
   row-gap: 30px;
   margin-top: 30px;
+  width: 60%;
+  margin: auto;
 }
 .imgf {
-    border: solid 5px rgba(230, 228, 241, 0.52);
-    transition: all 0.5s ease;
+  border: solid 5px rgba(230, 228, 241, 0.52);
+  transition: all 0.5s ease-in-out;
+  width: 300px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
 }
-.imgf:hover{
-    border: solid 5px grey   ;
+.imgf:hover {
+  border: solid 5px grey;
+  transform: scale(1.1);
 }
-.imgf img{
-    object-fit: cover;
-    max-width: 100%;
-    min-height: 100%;
+.imgf img {
+  object-fit: cover;
+  /* max-width: 100%;
+    min-height: 100%; */
+  z-index: 0;
+}
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(27, 28, 29, 0.5);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.mask h2,
+p {
+  font-style: italic;
+  color: rgba(240, 240, 231, 0.8);
+}
+.mask h2 {
+  background-color: rgba(27, 28, 29, 0.5);
+  margin-top: 40px;
+  font-style: oblique;
+}
+
+.mask p {
+  text-align: center;
+  margin-left: 10px;
+}
+.mask:hover {
+  opacity: 1;
+  animation-name: prueba;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes prueba {
+  15% {
+    transform: translateY(20px);
+  }
+
+  100% {
+    transform: translate(0);
+  }}
+
+  .sub{
+  color: rgb(182, 172, 33);
+  position: relative;
+  top:-20px;
+  font-size: 20px;
 }
