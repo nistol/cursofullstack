@@ -37,10 +37,27 @@ body {
   text-shadow: 4px 0px 6px rgba(5, 32, 30, 0.46);
   font-family: "Six Caps", sans-serif;
   font-size: 60px;
+  animation-name: titulo;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+  
+}
+@keyframes titulo{
+  0%{
+    transform: scale(0.5,0.5);
+  }
+  50%{
+    transform: scale(1.5,1.5);
+  }
+  100%{transform: scale(1,1);
+
+  }
 }
 h2 {
   text-align: center;
   font-style: italic;
+  
 }
 .nav {
   display: flex;
@@ -139,4 +156,25 @@ p {
   position: relative;
   top:-20px;
   font-size: 20px;
+}
+@keyframes swing
+{
+    15% { transform: translateX(5px); }
+    
+    30% { transform: translateX(-5px); }
+    
+    50% { transform: translateX(3px); }
+    
+    65% { transform: translateX(-3px); }
+    
+    80% { transform: translateX(2px); }
+    
+    100% { transform: translateX(0); }
+}
+
+.sub:hover
+{
+  animation: swing 1s ease;
+  animation-iteration-count: infinite;
+  animation-duration: 0.5s;
 }
