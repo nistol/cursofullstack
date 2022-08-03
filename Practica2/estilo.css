@@ -93,7 +93,14 @@ li{
         left: -60px;
 
     }
-    .contenedor1 h1 {
-        column-rule: blue;
+    .contenedor1  h1 {
+        color: blue;
+        position: absolute;
+        left: 50px;
     }
-    
+    .contenedor1 h3 {
+        color: blue;
+        position: absolute;
+        left: 70px;
+        top : 50px;
+    }
