@@ -1,0 +1,99 @@
+body{
+    background-color: black;
+    
+}
+.contenedor1{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    background: black;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+ul {
+    display: flex;
+    position: fixed;
+    left: 60%;
+    text-decoration: none;
+    list-style:none;
+    z-index: 1;
+    
+}
+.caja1{
+    width: 70%;
+    height: 300px;
+    background-color: red;
+    position: relative;
+    top: 100px;
+    left: 200px;
+}
+li{
+    margin-left: 50px;
+    font-size: 20px;
+}
+.contenedor2{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    background: white;
+    color: black;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+    .caja2{
+        width: 40%;
+         position: relative;
+         left: -200px;
+         top: 100px;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit:fill;
+    }
+    .img1{
+        width: 400px;
+        height: 300px;
+        background-color: red;
+        position: relative;
+        top: 50px;
+    }
+    a {
+        text-decoration: none;
+        color: blue;
+    }
+    .contenedor3{
+        width: 100%;
+        height: 550px;
+        display: flex;
+        background: green;
+        color: black;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .caja3{
+        width: 40%;
+        position: relative;
+        left: 30%;
+        top: 15px;
+        
+    }
+    .caja1 , h2{
+        text-align: center;
+    }
+    .caja1 p{
+        column-count: 2;
+    }
+    .img2{
+        width: 400px;
+        height: 400px;
+        position: relative;
+        top: 150px;
+        left: -60px;
+
+    }
+    .contenedor1 h1 {
+        column-rule: blue;
+    }
+    
