@@ -11,22 +11,12 @@ body {
 nav {
   height: 100px;
   z-index: 1;
-<<<<<<< HEAD:PRACTICA1/bootstrap/index.html/tilo.css
-  
-}
-.nav-item{
-   margin-right:15px;  
-}
-.logo {
-  transform: scale(2.5);
-=======
 }
 .nav-item {
   margin-right: 15px;
 }
 .logo {
   transform: scale(2.3);
->>>>>>> db822625d0977abad54f647341c1da34cddee96b:bootstrap/index.html/tilo.css
   margin-right: 15px;
   margin-left: 30px;
   border-radius: 102px 108px 108px 108px;
@@ -38,11 +28,7 @@ nav {
 }
 .foto1 {
   width: 1200px;
-<<<<<<< HEAD:PRACTICA1/bootstrap/index.html/tilo.css
-  height: 700px;
-=======
   height: 650px;
->>>>>>> db822625d0977abad54f647341c1da34cddee96b:bootstrap/index.html/tilo.css
   object-fit: fill;
 }
 .navbar-brand {
@@ -78,19 +64,11 @@ h2 {
 .btn {
   background-color: #9d8bdf;
   border: solid 1px gray;
-<<<<<<< HEAD:PRACTICA1/bootstrap/index.html/tilo.css
-
-=======
->>>>>>> db822625d0977abad54f647341c1da34cddee96b:bootstrap/index.html/tilo.css
 }
 .btn:hover {
   background-color: rgb(140, 98, 218);
   border: solid 1px gray;
   animation: swing 1s forwards;
-<<<<<<< HEAD:PRACTICA1/bootstrap/index.html/tilo.css
-  
-=======
->>>>>>> db822625d0977abad54f647341c1da34cddee96b:bootstrap/index.html/tilo.css
 }
 @keyframes swing {
   15% {
@@ -157,15 +135,6 @@ h2 {
 #contacto {
   background-image: url(https://www.xtrafondos.com/wallpapers/resoluciones/19/lineas-de-colores_1920x1080_3057.jpg);
 }
-<<<<<<< HEAD:PRACTICA1/bootstrap/index.html/tilo.css
-#navegacion{
-  position: fixed;
-  z-index: 1;
-}
-.enviar{
-  margin-left: 25%;
-  width: 40%;
-=======
 #navegacion {
   position: fixed;
   z-index: 1;
@@ -236,7 +205,6 @@ h2 {
 .footer {
   margin-top: 10px;
   text-align: center;
->>>>>>> db822625d0977abad54f647341c1da34cddee96b:bootstrap/index.html/tilo.css
 }
 @media (max-width: 1366px) {
   .foto1 {
@@ -251,20 +219,6 @@ h2 {
     padding-left: 10px;
     padding-right: 10px;
   }
-<<<<<<< HEAD:PRACTICA1/bootstrap/index.html/tilo.css
-  #inputcomentarios{
-    transform: scale(0.5,1);
-    position: relative;
-    left: -150px;
-  }
-  #navegacion{
-    position: relative;
-    z-index: 1;
-}
-.card {
-  margin-left: 20px;
-}
-=======
   #whats {
     width: 100px;
     height: 100px;
@@ -293,5 +247,4 @@ h2 {
     width: 100%;
     margin: auto;
   }
->>>>>>> db822625d0977abad54f647341c1da34cddee96b:bootstrap/index.html/tilo.css
-}
+} 
