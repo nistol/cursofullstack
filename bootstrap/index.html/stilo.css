@@ -2,6 +2,7 @@ body {
   background-color: rgba(0, 0, 0, 0.9);
   color: white;
   box-sizing: border-box;
+  
 }
 .nav-link:hover {
   color: goldenrod;
@@ -207,6 +208,13 @@ h2 {
 .footer {
   margin-top: 10px;
   text-align: center;
+}
+#all{
+  visibility: hidden;
+}
+#registro{
+ text-align: center;
+ margin-top: 200px;
 }
 @media (max-width: 1366px) {
   .foto1 {
