@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Actividad 5</title>
+    <style type="text/css">
+      @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+      body {
+        font-family: "Montserrat", sans-serif;
+      }
+      .flecha {
+        font-size: 4em;
+        width: 200px;
+        height: 200px;
+      }
+      .porcentaje {
+        font-size: 2em;
+      }
+      .boton1 {
+        width: 200px;
+        height: 200px;
+        background-image: url("https://www.html6.es/img/fondoBoton.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50%;
+        text-align: center;
+        user-select: none;
+      }
+    </style>
+    <script type="text/javascript">
+      window.onload = inicio;
+      var rotar = 0;
+      var sumar = true;
+      function inicio() {
+        document.querySelector(".boton1").onclick = girar;
+        actualizar();
+      }
+      function girar() {
+        if (sumar) {
+          rotar += 20;
+        } else {
+          rotar -= 20;
+        }
+        if (rotar <= 0 || rotar >= 360) {
+          sumar = !sumar;
+        }
+        document.querySelector(
+          ".flecha"
+        ).style.transform = `rotate(${rotar}deg)`;
+        actualizar();
+      }
+      function actualizar() {
+        document.querySelector(".porcentaje").innerHTML = `${rotar} deg`;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="boton1">
+      <div class="flecha">▲</div>
+      <div class="porcentaje"></div>
+    </div>
+  </body>
+</html>
