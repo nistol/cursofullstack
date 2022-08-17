@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 7</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <style type="text/css">
+         body{
+            font-family: 'Montserrat', sans-serif;
+            text-align:center;
+            
+          
+        }
+        button{
+            padding:5px;
+            margin:2px;
+            outline:none;
+            cursor:pointer;
+            border-radius:5px;
+            border:1px solid #1162ac;
+            background-color:#1162ac;
+            color:white;
+            
+        }
+        button:hover{
+            cursor:pointer;
+        }
+        img{
+            width:70px;
+            margin:2px;
+            border-radius:13px;
+        }
+    </style>
+    <script type="text/javascript">
+        window.onload=inicio;
+        let rojo="https://www.html6.es/img/rojo.png";
+        let azul="https://www.html6.es/img/azul.png";
+        let caja;
+
+        function inicio(){
+            caja = document.querySelector("#caja");
+            document.querySelectorAll("button")[0].onclick=rojos;
+            document.querySelectorAll("button")[1].onclick=azules;
+            document.querySelectorAll("button")[4].onclick=vaciar;  
+            document.querySelectorAll("button")[3].onclick=elirojo;
+            document.querySelectorAll("button")[2].onclick=camazul;
+        } 
+         function rojos (){
+            caja.insertAdjacentHTML("beforeend",`<img class="rojo" src="${rojo}">`);
+         }
+         function azules (){
+            for (i=0;i<4;i++){
+            caja.insertAdjacentHTML("beforeend",`<img class="azul" src="${azul}">`);}
+         }
+          function vaciar (){
+            caja.innerHTML="";
+
+          } 
+          function elirojo (){
+           let contar = document.querySelectorAll(".rojo").length;
+            for (let i=contar-1;i>=0;i--){
+                document.querySelectorAll(".rojo")[i].remove();
+            }
+          }
+          function camazul (){
+            let contar = document.querySelectorAll(".azul").length;
+            for (let i=contar-1;i>=0;i--){
+                document.querySelectorAll(".azul")[i].src=rojo;
+                document.querySelectorAll(".azul")[i].setAttribute("class","rojo");
+            }
+          }
+        
+    </script>
+</head>
+<body>
+    <button id="b1">insertar 1 rojo</button>
+    <button>insertar 4 azules</button>
+    <button>Modificar los azules</button>
+    <button>Eliminar los rojos</button>
+    <button>Vaciar</button>
+    <div id="caja"></div>    
+</body>
+</html>
