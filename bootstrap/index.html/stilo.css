@@ -68,6 +68,9 @@ h2 {
   border: solid 1px gray;
 
 }
+#otro{
+  margin-top: 50px;
+}
 .btn:hover {
   background-color: rgb(140, 98, 218);
   border: solid 1px gray;
@@ -142,9 +145,15 @@ h2 {
 #navegacion {
   position: fixed;
   z-index: 1;
+  background-color:#212529;
+
 }
 .enviar {
   
+  text-align: center;
+
+}
+.enviar button {
   width: 40%;
   margin-bottom: 20px;
 }
@@ -199,7 +208,7 @@ h2 {
   position: relative;
   left: 0px;
   color: white;
-  width:600px;
+  width: 880px;
 }
 .white {
   color: white;
@@ -220,7 +229,7 @@ h2 {
 }
 .map{
  border-radius: 10px;
- width: 100%;
+ width: 80%;
  height: 400px;
 }
 #datos{
@@ -234,13 +243,75 @@ h2 {
   font-style: italic ;
 }
 .cont{
-  width: 40%;
+  width: 60%;
+  position: relative;
+  left: 200px;
+  top: 40px;
+  background: rgba(255, 255, 255,0.8);
+  color: black;
+  border-radius: 10px;
+  
+}
+.sobre{
+  text-align: center;
+  
+}
+.imgsobre{
+  width: 100%;
+  background-color: #f3f12b;
+  height: 700px;
+  
+}
+.imgsobre img{
+  max-width: 100%;
+  max-height: 100%;
+}
+.carousel-item img {
+  object-fit: fill;
+}
+.pagos{
+  width: 100%;
+  background-color: azure;
+  text-align: center;
+}
+.pagos h2{
+  color: #212529;
+  padding-top: 20px;
+  margin-bottom: -70px;
+}
+.cajacont{
+  margin-top: -110px;
+  display: flex;
+  justify-content: center;
+  gap:20px;
+  
+}
+.caja1{
+  color: black;
+  height: 200px;
+  width: 300px;
+
+}
+.caja2{
+  color: black;
+  height: 200px;
+  width: 300px;
+  
+}
+.caja3{
+  color: black;
+  height: 200px;
+  width: 300px;
+  
 }
 @media (max-width: 1366px) {
   .foto1 {
     width: 1200px;
     height: 500px;
     object-fit: fill;
+  }
+  .cont{
+    top:0
   }
   #whats {
     left:90%;
@@ -253,6 +324,7 @@ h2 {
   #inputcomentarios {
     position: relative;
     left: 5px;
+    width: 600px;
     
   }
 }
@@ -267,9 +339,18 @@ h2 {
     height: 120px;
     position: fixed;
     left: 70%;
-  
    
   }
+  .imgpagos{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 80px;
+  }
+  .imgpagos img{
+    max-width: 100%;
+   
+  }
+ 
   #instas {
     width: 75px;
     height: 75px;
@@ -299,5 +380,10 @@ display: block;
   }
   .cont {
     width: 100%;
+    left: 0;
+    top:0;
+      }
+      .map{
+        width: 100%;
       }
 } 
