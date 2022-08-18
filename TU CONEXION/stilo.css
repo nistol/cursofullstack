@@ -141,11 +141,12 @@ h2 {
 #contacto {
   background-image: url(https://www.xtrafondos.com/wallpapers/resoluciones/19/lineas-de-colores_1920x1080_3057.jpg);
   background-size: cover;
+  
 }
 #navegacion {
   position: fixed;
   z-index: 1;
-  background-color:#212529;
+  background-color:rgba(33,37,41,0.6);
 
 }
 .enviar {
@@ -304,6 +305,12 @@ h2 {
   width: 300px;
   
 }
+.calendario{
+ margin-bottom: 50px;
+ margin-top: -40px;
+ text-align: center;
+}
+
 @media (max-width: 1366px) {
   .foto1 {
     width: 1200px;
