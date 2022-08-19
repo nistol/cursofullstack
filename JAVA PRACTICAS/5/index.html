@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Actividad 8</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Montserrat;
+      }
+      body {
+        margin: 4px;
+      }
+      .boton {
+        padding: 1px 7px;
+      }
+      input {
+        width: calc(100% - 4px);
+        margin: 3px 0 2px;
+        padding: 3px;
+      }
+      img {
+        width: 100%;
+        vertical-align: top;
+      }
+      .contenido {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 7px;
+      }
+      .cuadro {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 1px solid black;
+        text-align: center;
+        line-height: 50px;
+        font-size: 2.5em;
+        margin: 5px;
+        color: black;
+        font-weight: bold;
+      }
+      .rojo {
+        background-color: red;
+      }
+      .verde {
+        background-color: green;
+      }
+      .monedas img {
+        width: 23px;
+        margin: 2px;
+      }
+      .grande {
+        font-size: 1.5em;
+        color: red;
+      }
+    </style>
+    <script type="text/javascript">
+      // Si quieres usar la mism imagen de la moneda de la actividad usa esta URL
+      let urlDeLaMoneda = "https://www.html6.es/img/moneda.png";
+      let valor;
+      let monedas = 5;
+      let coincidencias=0;
+
+      window.onload = inicio;
+
+      function inicio() {
+        
+        creamone();
+        let empezar = (document.querySelector(".boton").onclick = leer);
+      }
+
+      function leer() {
+        coincidencias=0;
+        valor = document.getElementById("campo").value;
+        document.querySelector(".contenido").innerHTML = "";
+        if (valor >= 2 && valor <= 9) {
+          cajas();
+        } else {
+          document.getElementById("campo").value = "";
+          document.getElementById("campo").focus();
+        }
+      }
+      function cajas() {
+        for (i = 0; i < valor; i++) {
+          let alea = Math.floor(Math.random() * valor + 1);
+          let estilo = chequear(alea);
+          document
+            .querySelector(".contenido")
+            .insertAdjacentHTML(
+              "beforeend",
+              `<div class="cuadro ${estilo}">${alea}</div>`
+            );
+        }
+        if (coincidencias>0){
+           document.querySelector(".informacion").innerHTML=`se han producido ${coincidencias} coincidencias y ganaste ${coincidencias} monedas`;
+           monedas+=coincidencias;
+        
+        }else{
+            document.querySelector(".informacion").innerHTML=`se han producido ${coincidencias} coincidencias y Perdiste ${valor} monedas`;
+            monedas-=valor;
+        }
+        creamone();
+      }
+      function chequear(alea) {
+        if (alea == valor) {
+            coincidencias++;
+            creamone();
+          return "verde";
+        } else {
+          return "rojo";
+        }
+      }
+      function creamone() {
+        let m = document.getElementById("monedas");
+        m.innerHTML = `<div> Monedas <span class="grande"> ${monedas}</span></div>`;
+        for (let a = 0; a < monedas; a++) {
+          m.insertAdjacentHTML(
+            "beforeend",
+            `<img src="https://www.html6.es/img/moneda.png" alt="" />`
+          );
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="monedas" id="monedas"></div>
+    <input
+      id="campo"
+      autocomplete="off"
+      placeholder="Escribe un numero (2-9)"
+    />
+    <button class="boton">Empezar</button>
+    <div class="contenido"></div>
+    <div class="informacion"></div>
+  </body>
+</html>
