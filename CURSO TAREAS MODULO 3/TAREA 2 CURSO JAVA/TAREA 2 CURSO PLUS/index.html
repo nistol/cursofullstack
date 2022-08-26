@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="agregar">Inserte numero aqui</label>
+    <input type="number" id="agregar" />
+    <button id="btagregar">enviar</button>
+    <br />
+    <br />
+    <button id="btresultador">calcular</button>
+    <div id="resultado"></div>
+    <script>
+      var numeros = [];
+      var agregar = (document.getElementById("btagregar").onclick = agregarnum);
+      var calcular = (document.getElementById("btresultador").onclick =
+        calcularnum);
+
+      function agregarnum() {
+        let variable =  parseInt(document.getElementById("agregar").value);
+        numeros.push(variable);
+        document.getElementById("agregar").value = "";
+        document.getElementById("agregar").focus();
+      }
+      function calcularnum() {
+        let numMayor = numeros[0];
+        for (let i = 0; i < numeros.length; i++) {
+          if (numMayor < numeros[i]){
+             numMayor = numeros[i];
+          document.getElementById("resultado").innerHTML = `el numero mayor es ${numMayor}`;
+        }
+        }
+      }
+    </script>
+  </body>
+</html>

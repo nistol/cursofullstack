@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <label for="distancia">Que distancia debe transitar?</label>
+ <input type="text" id="distancia">
+ <button id="enviar">ENVIAR</button>
+ <div id="resultado"></div>
+<script>
+     resultado = document.getElementById("resultado");
+     var boton = document.getElementById("enviar");
+     boton.onclick=calcular;
+     document.getElementById("distancia").onkeydown = teclado;
+     
+     function teclado(e) {
+    let key = e.key;
+    if (key == "Enter") {
+        calcular();
+    }
+}
+     
+  function calcular (){
+    let distancia = document.getElementById("distancia").value;
+    if (distancia <= 1000){
+        resultado.innerHTML="utilziar transporte a pie";
+    }else if (distancia > 1000 && distancia <= 10000){
+        resultado.innerHTML="utilziar transporte Bicicleta";
+    }
+    else if (distancia > 10000 && distancia <= 30000){
+        resultado.innerHTML="utilziar transporte colectivo";
+    }else if (distancia > 30000 && distancia <= 100000){
+        resultado.innerHTML="utilziar transporte Auto";
+    }
+    else {
+        resultado.innerHTML="utilziar transporte Avion";
+    }
+
+  }
+</script> 
+</body>
+</html>
