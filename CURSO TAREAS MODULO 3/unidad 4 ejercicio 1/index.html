@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>body{
+        display: flex;
+        justify-content: center;
+    }
+    div{
+        width: 150px;
+        height: 150px;
+    }
+    div:hover{
+        cursor: pointer;
+    }
+    .rojo{
+        background-color: red;
+    }
+    .azul{
+        background-color: blue;
+    }
+    .verde{
+        background-color: green;
+    }</style>
+   <div id="caja1" class="rojo"></div>
+   <div id="caja2" class="azul"></div>
+   <div id="caja3" class="verde"></div>
+   <script>
+    window.onload = inicio;
+
+function inicio() {
+    const caja1=document.getElementById("caja1");
+    const caja2=document.getElementById("caja2");
+    const caja3=document.getElementById("caja3");
+    caja1.addEventListener('click' , function(cambiar) {
+        document.querySelector("body").style.background="red";
+    })
+    caja2.addEventListener('click' , function(cambiar){
+        document.querySelector("body").style.background="blue";
+    })
+    caja3.addEventListener('click' , function(cambiar) {
+        document.querySelector("body").style.background="green";
+    })  
+}
+   </script>
+</body>
+</html>

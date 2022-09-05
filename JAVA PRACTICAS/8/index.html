@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversor</title>
+  </head>
+  <body>
+    <h2>Conversion de pesos a dolares</h2>
+    <label for="cambio">Pesos</label>
+    <input type="number" class="cambio" />
+    <button class="enviar">Convertir a dolares</button>
+    <label for="dolares">Dolares</label>
+    <input type="number" class="dolares" readonly />
+    <br />
+    <br />
+    <label for="cambio">Dolares</label>
+    <input type="number" class="cambio"/>
+    <button class="enviar">Convertir a Pesos</button>
+    <label for="dolares">Pesos</label>
+    <input type="number" class="dolares" readonly />
+    <script>
+      window.onload = inicio;
+      function inicio() {
+        const boton = (document.querySelectorAll(".enviar")[0].onclick =
+          calcular);
+          const boton1 = (document.querySelectorAll(".enviar")[1].onclick =
+          calcular);
+        document.querySelectorAll(".cambio")[0].onkeydown = teclado;
+        document.querySelectorAll(".cambio")[1].onkeydown = teclado;
+      }
+      function teclado(e) {
+        let letra = e.key;
+        if (letra == "Enter") {
+          calcular();
+        }
+      }
+      function calcular() {
+        let valor = document.querySelectorAll(".cambio")[0].value;
+        let valor1 = document.querySelectorAll(".cambio")[1].value;
+        if (valor !="") {
+          let resultado = valor / 300;
+          document.querySelectorAll(".dolares")[0].value = resultado.toFixed(2);
+          document.querySelectorAll(".cambio")[0].value = "";
+          document.querySelectorAll(".cambio")[0].focus();
+        }else if (valor1 !=""){
+            let resultado1 = valor1 * 300;
+          document.querySelectorAll(".dolares")[1].value = resultado1.toFixed(2);
+          document.querySelectorAll(".cambio")[1].value = "";
+          document.querySelectorAll(".cambio")[1].focus();
+        }
+      }
+    </script>
+  </body>
+</html>

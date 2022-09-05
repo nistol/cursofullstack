@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tu Conexion</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="stilo.css" />
+  </head>
+
+  <body data-bs-spy="scroll" data-bs-target="#navbar" id="bod">
+    <header>
+      <nav id="navbar" class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div id="navegacion" class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://nistol2.000webhostapp.com/images/tu%20conexion.jpg"
+              class="logo"
+              alt=""
+              width="45"
+              height="40"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="index.html"
+                  >Inicio</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#precios">Precios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#contacto">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="index.html#imgsobre">Sobre nosotros</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col">
+          <div
+            id="carouselExampleCaptions"
+            class="carousel slide"
+            data-bs-ride="false"
+          >
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Slide 1"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="1"
+                aria-label="Slide 2"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleCaptions"
+                data-bs-slide-to="2"
+                aria-label="Slide 3"
+              ></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="https://p2.piqsels.com/preview/572/30/566/tarot-cards-fortune-symbol.jpg"
+                  class="d-block w-100 foto1"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block titulo">
+                  <h5 id="puto1">Hakuna Matata</h5>
+                  <p id="puto">Una Forma de ser.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="./images/fotolore1.jpeg" class="d-block w-100 foto1 alt="
+                ...">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 id="puto1">Hakuna Matata</h5>
+                  <p id="puto">Nada que aprender.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./images/fotolore2.jpeg"
+                  class="d-block w-100 foto1"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5 id="puto1">Sin Preocuparse</h5>
+                  <p id="puto">Asi es como hay que vivir.</p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h2 id="precios">Listado de Precios</h2>
+            <p id="promo">Lectura de Cartas Promo <br />Solo mes de Agosto</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <ul class="lh-lg" style="list-style: none">
+              <li>Lectura general Completa <span class="precio">$800</span></li>
+              <li>Lectura Corta <span class="precio">$500</span></li>
+              <li>Lectura Vincular <span class="precio">$600</span></li>
+              <li>
+                Sesiones de reiki, alineamiento de chakras
+                <span class="precio">$1000</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <h2 id="tiradas">Reservas</h2>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <img src="./images/foto1.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">Vincular y mensaje de los angeles</h5>
+                <p class="card-text">
+                  Vemos el aspecto de ambas personas, pensamientos ,
+                  sentimientos y consejos para mejorar el vinculo. Puede
+                  realizarse con parajeras,familia,amigos,etc. adicionalmente se
+                  podran realizar 3 preguntas. Duracion 25 a 40 minutos.
+                </p>
+                <a href="
+                https://mpago.la/1SbaZSu
+                " class="btn btn-primary" target="_blank">Reservar Ahora!!!</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <img src="./images/foto3.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Gran Tableau y mensaje de los angeles
+                </h5>
+                <p class="card-text">
+                  Panorama general de la vida. Situacion actual y lo proximo a
+                  suceder en un rango de 3 meses, tirada predictiva y evolutiva.
+                  incentiva a la persona a lograr los cambios necesarios para
+                  modificar situaciones conflictivas. Duracion 45 a 60 minutos.
+                </p>
+                <a href="
+                https://mpago.la/2QrzDZ1
+                " target="_blank" class="btn btn-primary">Reservar Ahora!!!</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem">
+              <img src="./images/foto6.jpeg" class="card-img-top" alt="..." />
+              <div class="card-body">
+                <h5 class="card-title">
+                  Cuadrado de nueve y mensaje de los angeles
+                </h5>
+                <p class="card-text">
+                  Pasado,presente y futuro cercano. Situaciones externas , cosas
+                  a modificar para progresar y demas. Adicionalmente se podran
+                  realizar 3 preguntas . Duracion 25 a 40 minutos.
+                </p>
+                <a href="
+                https://mpago.la/31bS9gL
+                " target="_blank" class="btn btn-primary" id="otro">Reserva Ahora!!!</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid pagos" >
+        <div class="pago">
+          <h2>Medios de pago</h2>
+          <div class="imgpagos">
+            <img src="https://www.rimaya.com.ar/img/cms/pagos.png" alt="">
+         </div>
+          <div class="cajacont">
+          <div class="caja1">
+            <h4>Pago en efectivo</h4>
+            <p>pago directo en efectivo en persona</p>
+          </div>
+          <div class="caja2"><h4>Mercado Pago</h4>
+            <p>Tarjeta o transferencia mercado pago</p>
+          </div>
+          <div class="caja2">
+            <h4>Transferencia bancaria</h4>
+            <p>Pago por transferencia bancaria con CBU</p>
+          </div>
+         </div>
+        </div>
+      </div>
+      <div class="container-fluid " id="contacto">
+        <div class="row con">
+          <h2 class="text-center" id="datos">Datos de Contacto</h2>
+          <div class="col">
+            <div class="cont">
+            <ul class="contf ">
+              <li class="contf" ><b>Whatsapp</b> : +54 11 6960-0225</li>
+              <li class="contf"><b>Instagram</b>: https://www.instagram.com/tuconexion88/</li>
+              <li class="contf"><b>Direccion</b>: Bartolome mitre 2296</li>
+            </ul>
+          </div>
+          </div>
+          <div class="col">
+            <iframe
+              class="map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.8278105583763!2d-58.3990046!3d-34.6085154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccae941056d57%3A0xe766fedfaa0f4f28!2sBartolom%C3%A9%20Mitre%202296%2C%20C1039%20AAJ%2C%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1660762183327!5m2!1ses-419!2sar"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+        <div class="row forms">
+          <div class="col">
+            <h2 class="text-center">Formulario de Contacto</h2>
+            <form class="row g-3">
+              <div class="col-md-12">
+                <label for="inputnombre" class="form-label"
+                  >Nombre y apellido</label
+                >
+                <input
+                  type="text"
+                  class="form-control bg-dark white"
+                  id="inputnombre"
+                  placeholder="ingrese su nombre"
+                  required
+                />
+              </div>
+
+              <div class="col-12">
+                <label for="inputemail" class="form-label">Email</label>
+                <input
+                  type="email"
+                  class="form-control bg-dark white"
+                  id="inputemail"
+                  placeholder="xxxx@gmail.com"
+                  required
+                />
+              </div>
+              <div class="col-12">
+                <label for="inputcelular" class="form-label">Celular</label>
+                <input
+                  type="tel"
+                  class="form-control bg-dark white"
+                  id="inputcelular"
+                  placeholder="ingrese su numero"
+                  required
+                />
+              </div>
+              <div class="col-md-6">
+                <label for="inputcomentarios" class="form-label">
+                  Comentarios y/o Sugerencias</label
+                >
+                <textarea
+                  class="bg-dark"
+                  style="border-radius: 5px"
+                  id="inputcomentarios"
+                  cols="25"
+                  rows="5"
+                ></textarea>
+              </div>
+              <div class="col-12 enviar">
+                <button type="submit" class="btn btn-primary">
+                  Enviar
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <div class="what" id="whats">
+                <a href="https://walink.co/7c3d4d" target="_blank"
+                  ><img
+                    style="max-width: 100%; max-height: 100%"
+                    src="./images/whatsppicon.png"
+                    alt="what"
+                /></a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="insta" id="instas">
+                <a
+                  href="https://www.instagram.com/tuconexion88/"
+                  target="_blank"
+                  ><img
+                    style="max-width: 100%; max-height: 100%"
+                    src="./images/instagram.png"
+                    alt="what"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row">
+         <div class="sobre">
+          <div class="imgsobre" id="imgsobre">
+            <img src="https://sd.keepcalms.com/i-w600/keep-calm-and-estamos-trabajando-para-usted.jpg" alt="">
+          </div>
+         </div> 
+        </div>
+      </div>
+      
+    </main>
+    <footer>
+      <div class="container-fluid footer">
+        <p>Buenos aires argentina 2022 Copyright Tu conexion</p>
+        <script src="java.js"></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+          crossorigin="anonymous"
+        ></script>
+      </div>
+    </footer>
+  </body>
+</html>

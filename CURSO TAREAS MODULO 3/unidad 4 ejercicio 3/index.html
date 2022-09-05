@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="enviar">Chequear</button>
+    <div id="resultado"></div>
+    <script>
+      var alumnos = [
+        {
+          nombre: "Juan Gomez",
+
+          nota: 7,
+        },
+        {
+          nombre: "Pedro Rodriguez",
+
+          nota: 4,
+        },
+        {
+          nombre: "Roxana García",
+
+          nota: 8,
+        },
+        {
+          nombre: "Luciano Lopez",
+
+          nota: 5,
+        },
+        {
+          nombre: "Fernanda Gimenez",
+
+          nota: 6,
+        },
+        {
+          nombre: "Florencia Martinez",
+
+          nota: 10,
+        },
+        {
+          nombre: "Raul Sanchez",
+
+          nota: 7,
+        },
+        {
+          nombre: "Sandra Figueroa",
+
+          nota: 8,
+        },
+      ];
+      var boton = document.getElementById("enviar");
+      boton.onclick = chequear;
+      function chequear() {
+        const aprovados = alumnos.filter(p => p.nota >= 7);
+        for ( e=0 ; e <= aprovados.length;e++){
+        document.getElementById("resultado").insertAdjacentHTML("beforeend",`aprobo ${aprovados[e].nombre} y su nota es ${aprovados[e].nota} <br>`)
+    }
+      }
+    </script>
+  </body>
+</html>

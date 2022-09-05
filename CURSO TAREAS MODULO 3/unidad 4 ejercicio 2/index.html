@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="area" cols="30" rows="10"></textarea>
+    <div id="contador"></div>
+    <script>
+      window.onload = inicio;
+
+      function inicio() {
+        document.getElementById("area").onkeyup = chequear;
+        contador.innerHTML = `cantidad de caracteres 0`;
+
+        function chequear() {
+          valor = document.getElementById("area").value.length;
+          let contador = document.getElementById("contador");
+          contador.innerHTML = `cantidad de caracteres ${valor}`;
+        }
+      }
+    </script>
+  </body>
+</html>

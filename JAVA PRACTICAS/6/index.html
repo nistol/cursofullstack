@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <div id="score"></div>
    <label for="rey">REY GODO: </label>
    <input type="text" id="rey"> 
    <button id="enviar">AÑADIR</button>
@@ -38,6 +39,7 @@
     let boton = document.getElementById("enviar").onclick=añadir;
     let resultado =document.getElementById("array");
     document.getElementById("rey").onkeydown=teclado;
+    let contador=0;
 
     function teclado (e){
         const tecla=e.key;
@@ -64,6 +66,10 @@
         const buscar = array.indexOf(texto);
         array.splice(buscar,1);
         this.remove ();
+        contador++;
+        document.getElementById("score").innerHTML=`score ${contador}`;
+
+
        }
 
       function errores (e){
