@@ -12,7 +12,7 @@ const conection = mysql.createConnection({
         console.log('la conexion funcionan')
     }) 
   
-    conection.query(`SELECT * from personas where DNI like "26951023"`, (err, datos) => {
+    conection.query(`SELECT * from empleados where apellido ="Dharma"`, (err, datos) => {
         if (err) throw err
         console.log(datos);
        

@@ -322,6 +322,10 @@ img {
   list-style: none;
 }
 
+.formulario{
+  margin-top: 50px;
+}
+
 @media (max-width: 1366px) {
   .foto1 {
     width: 1200px;
