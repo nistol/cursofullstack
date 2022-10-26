@@ -1,2 +1,15 @@
-<h1>{{title}}</h1>
-<p>Welcome to {{title}}</p>
+<div class="container , formulario">
+  <form action="/index" method="post">
+  <div class="mb-3">
+    <label for="inputdni" class="form-label">Documento</label>
+    <input type="text" class="form-control" id="inputdni" placeholder="Ingrese documento" name="documento"> 
+    {{#if error}}
+     <p>La persona no tiene datos</p>
+    {{/if}}  </div>
+    
+    <!--<div class="mb-3">
+    <label for="inputpassword" class="form-label">Password</label>
+    <input type="password" class="form-control" id="inputpassword" placeholder="Password" name="password">
+  </div>
+  <button type="submit" class="btn btn-primary">Ingresar</button>
+ </form>

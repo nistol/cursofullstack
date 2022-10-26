@@ -5,7 +5,9 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 require('dotenv').config();
-var pool = require('./modelos/bd');
+var session = require('express-session');
+//var pool = require('./modelos/bd');
+
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -22,12 +24,33 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use(session({
+  secret:'ProActiOn',
+  cookie:{maxAge:null},
+  resave:false,
+  saveUninitialized:true
+}));
 
-pool.query('select * from empleados where apellido = "Dharma"').then(function (resultados){
+secured = async(req,res,next) => {
+  try{
+    console.log(req.session.documento);
+    if(req.session.documento){
+      next();
+    }else{
+      res.redirect('/');
+    }
+    
+  }catch(error){
+    console.log(error);
+  }
+}
+
+app.use('/index', indexRouter);
+app.use('/users',secured, usersRouter);
+
+/*pool.query('select * from empleados where apellido = "Dharma"').then(function (resultados){
   console.log (resultados);
-})
+})*/
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

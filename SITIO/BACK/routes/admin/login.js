@@ -12,9 +12,7 @@ router.get('/', function (req, res, next) {
 
 router.get('/logout',function(req,res,next) {
     req.session.destroy();
-    res.render('admin/login', {
-      layout: 'admin/layout'
-    });
+    res.redirect('/admin/login')
   });
 
 router.post('/', async (req, res, next) => {
@@ -27,6 +25,7 @@ router.post('/', async (req, res, next) => {
     if (data != undefined) {
       req.session.id_usuario = data.ID;
       req.session.nombre = data.usuario;
+      req.session.password = data.password;
       res.redirect('/admin/novedades');
     } else {
       res.render('admin/login', {
