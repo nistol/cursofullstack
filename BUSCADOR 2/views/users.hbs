@@ -1,0 +1,36 @@
+<h2>Hola {{persona}}!!</h2>
+<div class="container , formulario">
+  <form action="/users" method="post">
+  <div class="mb-3">
+    <label for="inputdni" class="form-label">Ingrese Numero de documento</label>
+    <input type="text" class="form-control" id="inputdni" placeholder="Ingrese documento" name="documento"> 
+    <div class="d-grid gap-2 col-6 mx-auto">
+  <button class="btn btn-primary boton" id="enviar" type="submit" type="button">Enviar</button>
+</div> 
+ 
+    {{#if error}}
+     <p>La persona no tiene datos</p>
+    {{/if}}  </div>
+{{#if documento }}
+<div class="tabla">
+<table class="table">
+  <thead>
+    <tr class="tr">
+      <th scope="col">DNI</th>
+      <th scope="col">Nombre y apellido</th>
+      <th scope="col">Telefono</th>
+      <th scope="col">Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">{{documento}}</td>
+      <td>{{nombre}}</td>
+      <td>{{telefono}}</td>
+      <td>{{mail}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/if}} 
+<a class="btn btn-danger"href="/users/logout">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></p>

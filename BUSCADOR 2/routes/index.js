@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var consulta = require('./../modelos/consulta');
+var usuarios = require('./../modelos/usuarios');
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -10,12 +10,13 @@ router.get('/', function (req, res, next) {
 });
 router.post('/', async (req, res, next) => {
   try {
-    var documento = req.body.documento;
+    var usuario = req.body.usuario;
+    var password = req.body.password;
 
-    var data = await consulta.consulta(documento);
+    var data = await usuarios.getUsuario(usuario, password);
 
     if (data != undefined) {
-      req.session.documento = data.DNI;
+      req.session.nombre = data.usuario;
       res.redirect('/users');
       
     } else {
@@ -27,11 +28,5 @@ router.post('/', async (req, res, next) => {
     console.log(error);
   }
 })
-
-/*router.get('/logout',function(req,res,next) {
-    req.session.destroy();
-    res.redirect('/admin/login')
-  });*/
-
 
 module.exports = router;

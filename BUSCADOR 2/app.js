@@ -33,11 +33,11 @@ app.use(session({
 
 secured = async(req,res,next) => {
   try{
-    console.log(req.session.documento);
-    if(req.session.documento){
+    console.log(req.session.nombre);
+    if(req.session.nombre){
       next();
     }else{
-      res.redirect('/');
+      res.redirect('/index');
     }
     
   }catch(error){
@@ -45,6 +45,7 @@ secured = async(req,res,next) => {
   }
 }
 
+app.use('/', indexRouter);
 app.use('/index', indexRouter);
 app.use('/users',secured, usersRouter);
 

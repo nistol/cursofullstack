@@ -1,8 +1,30 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: #404040;
+  color: aliceblue;
+  box-sizing: border-box;
 }
 
 a {
-  color: #00B7FF;
+  color: aliceblue;
+}
+
+.titulo{
+  display:flex;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+th , tr{
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 17px;
+  padding: 10px;
+}
+.tabla{
+  display: flex;
+  justify-content: center;
+}
+.boton{
+  margin-top: 50px;
 }
