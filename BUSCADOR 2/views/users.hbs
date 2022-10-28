@@ -1,4 +1,4 @@
-<h2>Hola {{persona}}!!</h2>
+<h2 class="usuario">Hola {{persona}}!!</h2>
 <div class="container , formulario">
   <form action="/users" method="post">
   <div class="mb-3">
@@ -7,30 +7,80 @@
     <div class="d-grid gap-2 col-6 mx-auto">
   <button class="btn btn-primary boton" id="enviar" type="submit" type="button">Enviar</button>
 </div> 
- 
-    {{#if error}}
+ {{#if error}}
      <p>La persona no tiene datos</p>
-    {{/if}}  </div>
+ {{/if}}
+      </div>
 {{#if documento }}
+<h2 class="encabezados">Informe de {{nombre}}</h2>
+<br><br>
 <div class="tabla">
 <table class="table">
   <thead>
     <tr class="tr">
       <th scope="col">DNI</th>
       <th scope="col">Nombre y apellido</th>
-      <th scope="col">Telefono</th>
-      <th scope="col">Mail</th>
+      <th scope="col">Telefono 1</th>
+      <th scope="col">Telefono 2</th>
+      <th scope="col">Telefono 3</th>
+      <th scope="col">Telefono 4</th>
+      <th scope="col">Telefono 5</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td scope="row">{{documento}}</td>
       <td>{{nombre}}</td>
-      <td>{{telefono}}</td>
-      <td>{{mail}}</td>
+      <td>{{telefono01}}</td>
+      <td>{{telefono02}}</td>
+      <td>{{telefono03}}</td>
+      <td>{{telefono04}}</td>
+      <td>{{telefono05}}</td>
     </tr>
   </tbody>
 </table>
 </div>
-{{/if}} 
+{{/if}}
+{{#if empresa}}
+<h2 class="encabezados">DATOS LABORALES</h2><br><br>
+<div class="tabla">
+<table class="table">
+  <thead>
+    <tr class="tr">
+      <th scope="col">CUIT</th>
+      <th scope="col">Empresa</th>
+      <th scope="col">Categoria</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">{{cuit}}</td>
+      <td>{{empresa}}</td>
+      <td>{{categoria}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/if}}
+{{#if vehiculo01}}
+<h2 class="encabezados">DATOS VEHICULARES</h2><br><br>
+<div class="tabla">
+<table class="table">
+  <thead>
+    <tr class="tr">
+      <th scope="col">Vehiculo 1</th>
+      <th scope="col">Vehiculo 2</th>
+      <th scope="col">Vehiculo 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">{{vehiculo01}}</td>
+      <td>{{vehiculo02}}</td>
+      <td>{{vehiculo03}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+{{/if}}
 <a class="btn btn-danger"href="/users/logout">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></p>

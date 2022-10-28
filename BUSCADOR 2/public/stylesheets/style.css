@@ -28,3 +28,17 @@ th , tr{
 .boton{
   margin-top: 50px;
 }
+
+.footer {
+  margin-top: 10px;
+  text-align: center;
+}
+.encabezados{
+  text-align: center;
+  color: blueviolet;
+  margin-top: 30px;
+  text-transform: uppercase;
+}
+.usuario{
+  text-align: center;
+}
