@@ -5,7 +5,7 @@ var usuarios = require('./../modelos/usuarios');
 /* GET home page. */
 router.get('/', function (req, res, next) {
   res.render('index', {
-    title: "pruebamaxi"
+    title: "Buscador Proaction"
   });
 });
 router.post('/', async (req, res, next) => {

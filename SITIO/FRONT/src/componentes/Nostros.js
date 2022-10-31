@@ -10,6 +10,7 @@ const Nosotros = (props) => {
                 alt=""
               />
             </div>
+            <script type="text/javascript" src="https://form.jotform.com/jsform/222293509100648"></script>
           </div>
         </div>
       </div>

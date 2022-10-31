@@ -15,11 +15,10 @@
 <h2 class="encabezados">Informe de {{nombre}}</h2>
 <br><br>
 <div class="tabla">
-<table class="table">
+<table class="table table-hover">
   <thead>
     <tr class="tr">
-      <th scope="col">DNI</th>
-      <th scope="col">Nombre y apellido</th>
+      <th scope="col">TIPO DE TELEFONO</th>
       <th scope="col">Telefono 1</th>
       <th scope="col">Telefono 2</th>
       <th scope="col">Telefono 3</th>
@@ -29,22 +28,71 @@
   </thead>
   <tbody>
     <tr>
-      <td scope="row">{{documento}}</td>
-      <td>{{nombre}}</td>
-      <td>{{telefono01}}</td>
-      <td>{{telefono02}}</td>
-      <td>{{telefono03}}</td>
-      <td>{{telefono04}}</td>
-      <td>{{telefono05}}</td>
+      <td>CELULAR</td>
+      <td>{{telefono01}} {{#if telefono01}}<a href="https://api.whatsapp.com/send?phone=549{{telefono01}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
+      <td>{{telefono02}} {{#if telefono02}} <a href="https://api.whatsapp.com/send?phone=549{{telefono02}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
+      <td>{{telefono03}} {{#if telefono03}} <a href="https://api.whatsapp.com/send?phone=549{{telefono03}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
+      <td>{{telefono04}} {{#if telefono04}}<a href="https://api.whatsapp.com/send?phone=549{{telefono04}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
+      <td>{{telefono05}}{{#if telefono05}} <a href="https://api.whatsapp.com/send?phone=549{{telefono05}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
     </tr>
   </tbody>
-</table>
+  </table>
 </div>
+<div class="tabla">
+<table class="table table-hover">
+  <thead>
+    <tr class="tr">
+      <th scope="col">TIPO DE TELEFONO</th>
+      <th scope="col">Telefono 1</th>
+      <th scope="col">Telefono 2</th>
+      <th scope="col">Telefono 3</th>
+      <th scope="col">Telefono 4</th>
+      <th scope="col">Telefono 5</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>FIJO</td>
+      <td>49825110</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+<div class="tabla">
+<table class="table table-hover">
+  <thead>
+    <tr class="tr">
+      <th scope="col">E-MAIL</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>CORREO ELECTRONICO</td>
+      <td>maildeprueba1@gmail.com</td>
+      <td>maildeprueba2@gmail.com</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+
+
 {{/if}}
 {{#if empresa}}
 <h2 class="encabezados">DATOS LABORALES</h2><br><br>
 <div class="tabla">
-<table class="table">
+<table class="table table-hover">
   <thead>
     <tr class="tr">
       <th scope="col">CUIT</th>
@@ -65,7 +113,7 @@
 {{#if vehiculo01}}
 <h2 class="encabezados">DATOS VEHICULARES</h2><br><br>
 <div class="tabla">
-<table class="table">
+<table class="table table-hover">
   <thead>
     <tr class="tr">
       <th scope="col">Vehiculo 1</th>
