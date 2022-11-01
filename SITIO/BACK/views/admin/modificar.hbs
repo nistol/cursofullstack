@@ -1,0 +1,24 @@
+<div class="container formopi">
+    <div class="row">
+<form action="/admin/opiniones/modificar" method="post">
+<input type="hidden" value="{{opiniones.id}}" id="" name="id" >
+  <div class="col-6">
+   <label for="tituloopiniones" class="form-label opi">Titulo</label>
+    <input type="text" class="form-control" value="{{opiniones.titulo}}" id="tituloopiniones" name="titulo" placeholder="Modifique titulo aqui">
+  </div>
+  <div class="col-6">
+    <label for="subtituloopiniones" class="form-label opi">Subtitulo</label>
+    <input type="text" value="{{opiniones.subtitulo}}" class="form-control" id="subtituloopiniones" name="subtitulo" placeholder="Agregue subtitulo aqui">
+  </div>
+  <div class="col-6">
+     <label for="cuerpoopiniones" class="opi">cuerpo</label><br>
+    <textarea name="cuerpo" id="cuerpoopiniones" cols="80" rows="7" class="opi" >{{opiniones.cuerpo}}
+    </textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Modificar</button>
+</form>
+</div>
+{{#if error}}
+ <h5>{{message}}</h5>
+{{/if}}
+</div>

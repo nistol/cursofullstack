@@ -63,7 +63,7 @@ h2 {
   border: solid 5px grey;
   transform: scale(1.1);
 }
-.btn {
+/*.btn {
   background-color: #9d8bdf;
   border: solid 1px gray;
 
@@ -326,6 +326,19 @@ img {
   margin-top: 50px;
 }
 
+th , td{
+  color: white;
+}
+.formopi{
+  margin-bottom: 10px;  
+  margin-top: 40px;
+  position: relative;
+  left: 360px;
+}
+.opi{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
 @media (max-width: 1366px) {
   .foto1 {
     width: 1200px;
