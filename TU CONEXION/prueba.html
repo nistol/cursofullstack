@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body>
+       <div class="container formopi">
+        <form action="/users/modificar" method="post">
+          <input type="hidden" value="{{telefonos.id}}" id="" name="id" />
+          <div class="col">
+            <label for="celular1" class="form-label opi">Celular 1</label>
+            <input
+              type="text"
+              class="form-control"
+              value="{{telefonos.telefono01}}"
+              id="celular1"
+              name="celular1"
+              placeholder="Modifique celular 1 aqui"
+            />
+    
+          </div>
+          <div class="col 1">
+            <label for="celular2" class="form-label opi">Celular 2</label>
+            <input
+              type="text"
+              value="{{telefonos.telefono02}}"
+              class="form-control"
+              id="celular2"
+              name="celular2"
+              placeholder="Modifique Celular 2 aqui"
+            />
+          </div>
+          <div class="col-5">
+            <label for="celular3" class="form-label opi">Celular 3</label>
+            <input
+              type="text"
+              value="{{telefonos.telefono03}}"
+              class="form-control"
+              id="celular3"
+              name="celular3"
+              placeholder="Modifique Celular 3 aqui"
+            />
+          </div>
+          <div class="col-5">
+            <label for="celular4" class="form-label opi">Celular 4</label>
+            <input
+              type="text"
+              value="{{telefonos.telefono04}}"
+              class="form-control"
+              id="celular4"
+              name="celular4"
+              placeholder="Modifique Celular 4 aqui"
+            />
+          </div>
+          <div class="col-5">
+            <label for="celular5" class="form-label opi">Celular 5</label>
+            <input
+              type="text"
+              value="{{telefonos.telefono05}}"
+              class="form-control"
+              id="celular5"
+              name="celular5"
+              placeholder="Modifique Celular 5 aqui"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary">Modificar</button>
+        </form>
+      
+    </div>
+    
+</body>
+</html>

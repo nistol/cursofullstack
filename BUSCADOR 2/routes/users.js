@@ -8,6 +8,53 @@ router.get('/logout', function (req, res, next) {
   req.session.destroy();
   res.redirect('/index')
 });
+
+router.get ('/eliminar/:telefono/:id', async (req,res,next) => {
+  let id = req.params.id;
+  let telefono = req.params.telefono;
+  let obj = {}
+  obj[telefono]=null;
+  await consulta.deletetelefono(obj,id);
+  res.redirect('/users')
+});
+
+router.get('/modificar/:id',async (req,res,next) =>{
+  let id = req.params.id;
+  let telefonos = await consulta.getDatosById(id);
+  res.render('modificar',{
+   telefonos
+  })
+} )
+
+router.post('/modificar', async(req,res,next) =>{
+  try{
+    let obj = {
+      telefono01:req.body.celular1,
+      telefono02:req.body.celular2,
+      telefono03:req.body.celular3,
+      telefono04:req.body.celular4,
+      telefono05:req.body.celular5,
+      fijo01:req.body.fijo1,
+      fijo02:req.body.fijo2,
+      fijo03:req.body.fijo3,
+      fijo04:req.body.fijo4,
+      fijo05:req.body.fijo5,
+      mail01:req.body.mail1,
+      mail02:req.body.mail2,
+      mail03:req.body.mail3,
+    }
+    await consulta.modificarDatosById(obj,req.body.id);
+    res.redirect('/users')
+  } catch (error){
+    console.log(error);
+
+    res.render('modificar',{
+      error:true,
+      message:'no se modificaron los datos'
+    })
+  }
+})
+
 router.post('/', async (req, res, next) => {
   try {
     var documento = req.body.documento;
@@ -29,6 +76,7 @@ router.post('/', async (req, res, next) => {
         telefono03:data.telefono03,
         telefono04:data.telefono04,
         telefono05:data.telefono05,
+        id:data.id,
         fijo01:data.fijo01,
         fijo02:data.fijo02,
         fijo03:data.fijo03,
@@ -43,6 +91,7 @@ router.post('/', async (req, res, next) => {
         vehiculo01:data2.vehiculo01,
         vehiculo02:data2.vehiculo02,
         vehiculo03:data2.vehiculo03,
+        
     });
     }
 
@@ -52,6 +101,7 @@ router.post('/', async (req, res, next) => {
         persona: req.session.nombre,
         documento: data.dni,
         nombre: data.nombre,
+        id:data.id,
         telefono01: data.telefono01,
         telefono02:data.telefono02,
         telefono03:data.telefono03,
@@ -77,6 +127,7 @@ router.post('/', async (req, res, next) => {
         persona: req.session.nombre,
         documento: data.dni,
         nombre: data.nombre,
+        id:data.id,
         telefono01: data.telefono01,
         telefono02:data.telefono02,
         telefono03:data.telefono03,
@@ -115,6 +166,7 @@ router.post('/', async (req, res, next) => {
         persona: req.session.nombre,
         documento: data.dni,
         nombre: data.nombre,
+        id:data.id,
         telefono01: data.telefono01,
         telefono02:data.telefono02,
         telefono03:data.telefono03,

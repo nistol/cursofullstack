@@ -24,16 +24,18 @@
       <th scope="col">Telefono 3</th>
       <th scope="col">Telefono 4</th>
       <th scope="col">Telefono 5</th>
+      <th scope="col"><a class="btn btn-success" href="users/modificar/{{id}}"><i class="bi bi-plus" aria-hidden="true">Agregar/Editar</i></a> </th>
+    </tr>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>CELULAR</td>
-      <td>{{telefono01}} {{#if telefono01}}<a href="https://api.whatsapp.com/send?phone=549{{telefono01}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
-      <td>{{telefono02}} {{#if telefono02}} <a href="https://api.whatsapp.com/send?phone=549{{telefono02}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
-      <td>{{telefono03}} {{#if telefono03}} <a href="https://api.whatsapp.com/send?phone=549{{telefono03}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
-      <td>{{telefono04}} {{#if telefono04}}<a href="https://api.whatsapp.com/send?phone=549{{telefono04}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
-      <td>{{telefono05}}{{#if telefono05}} <a href="https://api.whatsapp.com/send?phone=549{{telefono05}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a>{{/if}}</td>
+      <td>{{telefono01}} {{#if telefono01}}<a href="https://api.whatsapp.com/send?phone=549{{telefono01}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a> <a class="btn btn-secondary" href="users/eliminar/telefono01/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a> {{/if}} </td>
+      <td>{{telefono02}} {{#if telefono02}} <a href="https://api.whatsapp.com/send?phone=549{{telefono02}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a> <a class="btn btn-secondary" href="users/eliminar/telefono02/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{telefono03}} {{#if telefono03}} <a href="https://api.whatsapp.com/send?phone=549{{telefono03}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a> <a class="btn btn-secondary" href="users/eliminar/telefono03/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{telefono04}} {{#if telefono04}}<a href="https://api.whatsapp.com/send?phone=549{{telefono04}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a><a class="btn btn-secondary" href="users/eliminar/telefono04/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{telefono05}}{{#if telefono05}} <a href="https://api.whatsapp.com/send?phone=549{{telefono05}}&text=Hola+esto+es+una+prueba" target="_blank"><img class="whatsapp"src="/images/whatsppicon.png" alt=""></a> <a class="btn btn-secondary" href="users/eliminar/telefono05/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
     </tr>
   </tbody>
   </table>
@@ -53,11 +55,11 @@
   <tbody>
     <tr>
       <td>FIJO</td>
-      <td>{{fijo01}}</td>
-      <td>{{fijo02}}</td>
-      <td>{{fijo03}}</td>
-      <td>{{fijo04}}</td>
-      <td>{{fijo05}}</td>
+      <td>{{fijo01}} {{#if fijo01}}<a class="btn btn-secondary" href="users/eliminar/fijo01/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{fijo02}}{{#if fijo02}}<a class="btn btn-secondary" href="users/eliminar/fijo02/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{fijo03}}{{#if fijo03}}<a class="btn btn-secondary" href="users/eliminar/fijo03/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{fijo04}}{{#if fijo04}}<a class="btn btn-secondary" href="users/eliminar/fijo04/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{fijo05}} {{#if fijo05}}<a class="btn btn-secondary" href="users/eliminar/fijo05/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
     </tr>
   </tbody>
   </table>
@@ -73,13 +75,14 @@
       <th scope="col"></th>
       <th scope="col"></th>
     </tr>
+    </tr>
   </thead>
   <tbody>
     <tr>
       <td>CORREO ELECTRONICO</td>
-      <td>{{mail01}}</td>
-      <td>{{mail02}}</td>
-      <td>{{mail03}}</td>
+      <td>{{mail01}} {{#if mail01}}<a class="btn btn-secondary" href="users/eliminar/mail01/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{mail02}}{{#if mail02}}<a class="btn btn-secondary" href="users/eliminar/mail02/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
+      <td>{{mail03}}{{#if mail03}}<a class="btn btn-secondary" href="users/eliminar/mail03/{{id}}"><i class="bi bi-trash" aria-hidden="true"></i></a>{{/if}}</td>
       <td></td>
       <td></td>
     </tr>
