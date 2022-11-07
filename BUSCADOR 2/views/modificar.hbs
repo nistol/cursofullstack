@@ -4,6 +4,7 @@
 <div class="container formopi">
     <form action="/users/modificar" method="post">
       <input type="hidden" value="{{telefonos.id}}" id="" name="id" />
+      <input type="hidden" value="{{telefonos.dni}}" id="" name="dni" />
       <div class="col-5">
         <label for="celular1" class="form-label opi">Celular 1</label>
         <input
@@ -140,7 +141,7 @@
           placeholder="Modifique Mail 2 aqui"
         />
       </div>
-      <div3 class="col-5">
+      <div class="col-5">
         <label for="Mail3" class="form-label opi">Mail 3</label>
         <input
           type="text"
@@ -150,9 +151,9 @@
           name="Mail3"
           placeholder="Modifique Mail 3 aqui"
         />
-      </div3
+      </div>
       <br><br>
-      <center><button type="submit" class="btn btn-primary">Guardar</button></center>
+      <center><button type="submit" class="btn btn-primary"><a href="/users/{{telefonos.dni}}"></a> Guardar</button></center>
     </form>
    {{#if error}}
     <p>{{message}}</p>

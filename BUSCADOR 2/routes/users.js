@@ -9,13 +9,14 @@ router.get('/logout', function (req, res, next) {
   res.redirect('/index')
 });
 
-router.get ('/eliminar/:telefono/:id', async (req,res,next) => {
+router.get ('/eliminar/:telefono/:id/:dni', async (req,res,next) => {
   let id = req.params.id;
   let telefono = req.params.telefono;
+  let dni = req.params.dni;
   let obj = {}
   obj[telefono]=null;
   await consulta.deletetelefono(obj,id);
-  res.redirect('/users')
+  res.redirect(`/users/${dni}`)
 });
 
 router.get('/modificar/:id',async (req,res,next) =>{
@@ -24,6 +25,162 @@ router.get('/modificar/:id',async (req,res,next) =>{
   res.render('modificar',{
    telefonos
   })
+} )
+
+router.get('/:dni',async (req,res,next) =>{
+  let dni = req.params.dni;
+
+    let data = await consulta.consulta(dni);
+
+    let data1 = await trabajo.trabajo(dni);
+
+    let data2 = await vehiculos.vehiculos(dni);
+    if (data != undefined && data1 != undefined && data2 != undefined){
+      res.render('users', {
+        layout: 'layout',
+        persona: req.session.nombre,
+        documento: data.dni,
+        nombre: data.nombre,
+        telefono01: data.telefono01,
+        telefono02:data.telefono02,
+        telefono03:data.telefono03,
+        telefono04:data.telefono04,
+        telefono05:data.telefono05,
+        id:data.id,
+        fijo01:data.fijo01,
+        fijo02:data.fijo02,
+        fijo03:data.fijo03,
+        fijo04:data.fijo04,
+        fijo05:data.fijo05,
+        mail01:data.mail01,
+        mail02:data.mail02,
+        mail03:data.mail03,
+        empresa: data1.empresa,
+        cuit: data1.cuit,
+        categoria: data1.categoria,
+        vehiculo01:data2.vehiculo01,
+        vehiculo02:data2.vehiculo02,
+        vehiculo03:data2.vehiculo03,
+        
+    });
+    }
+
+    else if (data != undefined && data1 != undefined){
+      res.render('users', {
+        layout: 'layout',
+        persona: req.session.nombre,
+        documento: data.dni,
+        nombre: data.nombre,
+        id:data.id,
+        telefono01: data.telefono01,
+        telefono02:data.telefono02,
+        telefono03:data.telefono03,
+        telefono04:data.telefono04,
+        telefono05:data.telefono05,
+        fijo01:data.fijo01,
+        fijo02:data.fijo02,
+        fijo03:data.fijo03,
+        fijo04:data.fijo04,
+        fijo05:data.fijo05,
+        mail01:data.mail01,
+        mail02:data.mail02,
+        mail03:data.mail03,
+        empresa: data1.empresa,
+        cuit: data1.cuit,
+        categoria: data1.categoria,
+    });
+    }
+
+    else if (data != undefined && data2 != undefined){
+      res.render('users', {
+        layout: 'layout',
+        persona: req.session.nombre,
+        documento: data.dni,
+        nombre: data.nombre,
+        id:data.id,
+        telefono01: data.telefono01,
+        telefono02:data.telefono02,
+        telefono03:data.telefono03,
+        telefono04:data.telefono04,
+        telefono05:data.telefono05,
+        fijo01:data.fijo01,
+        fijo02:data.fijo02,
+        fijo03:data.fijo03,
+        fijo04:data.fijo04,
+        fijo05:data.fijo05,
+        mail01:data.mail01,
+        mail02:data.mail02,
+        mail03:data.mail03,
+        vehiculo01:data2.vehiculo01,
+        vehiculo02:data2.vehiculo02,
+        vehiculo03:data2.vehiculo03,
+    });
+    }
+
+    else if (data1 != undefined && data2 != undefined){
+      res.render('users', {
+        layout: 'layout',
+        persona: req.session.nombre,
+        vehiculo01:data2.vehiculo01,
+        vehiculo02:data2.vehiculo02,
+        vehiculo03:data2.vehiculo03,
+        empresa: data1.empresa,
+        cuit: data1.cuit,
+        categoria: data1.categoria,
+    });
+    }
+
+    else if (data != undefined){
+      res.render('users', {
+        layout: 'layout',
+        persona: req.session.nombre,
+        documento: data.dni,
+        nombre: data.nombre,
+        id:data.id,
+        telefono01: data.telefono01,
+        telefono02:data.telefono02,
+        telefono03:data.telefono03,
+        telefono04:data.telefono04,
+        telefono05:data.telefono05,
+        fijo01:data.fijo01,
+        fijo02:data.fijo02,
+        fijo03:data.fijo03,
+        fijo04:data.fijo04,
+        fijo05:data.fijo05,
+        mail01:data.mail01,
+        mail02:data.mail02,
+        mail03:data.mail03,
+    });
+    }
+
+    else if (data1 != undefined) {
+      console.log(data1.empresa);
+      res.render('users', {
+        layout: 'layout',
+        persona: req.session.nombre,
+        empresa: data1.empresa,
+        cuit: data1.cuit,
+        categoria: data1.categoria,
+
+      });}
+      else if (data2 != undefined) {
+        console.log(data1.empresa);
+        res.render('users', {
+          layout: 'layout',
+          persona: req.session.nombre,
+          vehiculo01:data2.vehiculo01,
+          vehiculo02:data2.vehiculo02,
+          vehiculo03:data2.vehiculo03,
+  
+        });}
+
+       else {
+      res.render('users', {
+        persona: req.session.nombre,
+        error: true
+      });
+    }
+    
 } )
 
 router.post('/modificar', async(req,res,next) =>{
@@ -44,7 +201,9 @@ router.post('/modificar', async(req,res,next) =>{
       mail03:req.body.mail3,
     }
     await consulta.modificarDatosById(obj,req.body.id);
-    res.redirect('/users')
+  
+    res.redirect(`/users/${req.body.dni}`)
+
   } catch (error){
     console.log(error);
 

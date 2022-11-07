@@ -25,11 +25,11 @@ async function deleteOpiniones (id){
     return rows;
 }
 
-async function getOpinionesById (id){
+async function getOpinionesById (obj,id){
    
-    var query = 'select * from opiniones where id = ? ';
-    var rows = await pool.query(query,[id]);
-    return rows[0];
+    var query = 'UPDATE opiniones SET ? = "ghol" WHERE id = ?';
+    var rows = await pool.query(query,[obj,id]);
+    return rows;
 }
 
 async function modificarOpinionById (obj,id){

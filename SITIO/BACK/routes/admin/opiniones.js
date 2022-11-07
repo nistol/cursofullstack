@@ -48,13 +48,12 @@ router.get ('/eliminar/:id', async (req,res,next) => {
   res.redirect('/admin/opiniones')
 });
 
-router.get ('/modificar/:id', async (req,res,next) => {
+router.get ('/modificar/:cuerpo/:id', async (req,res,next) => {
   let id = req.params.id;
-  let opiniones = await opinionesModel.getOpinionesById(id);
-   res.render ('admin/modificar',{
-    layout: 'admin/layout',
-    opiniones
-   })
+  let pija = req.params.cuerpo;
+  let obj = {`${pija}`:null};
+  let opiniones = await opinionesModel.getOpinionesById(obj,id);
+   res.redirect('/admin/opiniones');
 });
 
 router.post('/modificar', async(req,res,next) =>{
